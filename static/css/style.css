@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Roboto Mono", monospace;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color:#2E3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+h1,h2{
+    font-size: 2vw;
+    text-decoration: none;
+    color:#AAB1BF;
+    text-shadow: 3px 3px 3px #1A1E26;
+}
+
+h3{
+    font-size: 1vw;
+    text-decoration: none;
+    color:#cf7373;
+    text-shadow: 3px 3px 3px #1A1E26;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    background-color: #47464e
+}
+
+.fristMain{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #47464e;
+    width: 900px;
+    height: 88vh;
+}
+
+.secoundMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #47464e;    
+    height: 88vh;
+}
+
+.textareaAndButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 530px;
+    height: 20vh;
+}
+
+.botaoEnviar {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    color: #000;
+    background-color:#d3ddd4;
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+    align-items: center;
+    
+}
+
+textarea{
+    font-size: 25px;
+    text-shadow: 0 0 15px;
+    color: #AAB1BF;
+    width: 25vw;
+    height: 10vh;
+    outline: none;
+    border-radius: 15px;
+    border: #2E3640;
+    background-color:#2E3640;
+    box-shadow: 3px 3px 3px rgb(39, 38, 38);
+    text-align: center;
+}
+
+::placeholder {
+    color: #AAB1BF;
+    border: #AAB1BF;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0 0 15px;
+
+}
+
+.sectionLogin{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50vw;
+    height: 30vh;
+}
+
+
+
+.form{
+    width: 40vw;
+    height: 10vh;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2E3640;
+    box-shadow: 3px 3px 3px #1A1E26;
+    color: #AAB1BF;
+}
+
+pre{
+    text-shadow: 0 0 10px;
+    color: #AAB1BF;
+    font-size: 15px;
+}
+
+.sectionReceberMsg {
+    width: 550px;
+    height: 600px;
+    border-radius: 5%;
+    background-color: #2E3640;
+    box-shadow: 2px 2px 2px 2px rgb(39, 38, 38);
+    overflow-y: auto; 
+    padding: 10px;
+    
+}
+
+.formCadastro{
+    width: 15vw;
+    height: 30vh;
+    border-radius: 15px;
+    display: flex;
+    background-color: #2E3640;
+    box-shadow: 3px 3px 3px #1A1E26;
+    color: #AAB1BF;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 7vw;
+    height: 2.5vh;
+    border-radius: 10px;
+    color: #000;
+    background-color:#d3ddd4;
+    font-size: 15px;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+}
+
+.logados{
+    width: 50vw;
+    height: 50vh;
+}
+
+
+footer{
+    height: 5vh;
+    background-color: #47464e;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#cf7373;
+    font-weight: 700;
+}

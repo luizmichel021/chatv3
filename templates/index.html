@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Chat Doença V3</title>
+</head>
+<body>
+    <header>
+       <h1>Chat Doença V.3 </h1>    
+    </header>
+
+    <main>
+        <section class="fristMain">
+            <section class="sectionReceberMsg">
+                {% for mensagem in mensagens %}
+                <div class="mensagem">
+                    <pre>{{ mensagem }}</pre>
+                </div>
+                <hr>
+                {% endfor %}            
+            </section>
+
+            <section >
+                <form class="textareaAndButton" action="/" method="post">
+                    <textarea
+                    class="input"
+                    name="message"
+                    cols="20"
+                    rows="10"
+                    placeholder="Digite o texto que deseja enviar!"
+                    ></textarea>
+                    <button class="botaoEnviar" type="submit" name="action" value="send_message">Enviar</button>
+                </form>
+
+            </section>
+
+        </section>
+
+        <section class="secoundMain">
+
+            <section class="sectionLogin">
+                <h2>Login :</h2>
+                <form action="/" method="post">
+                    <input type="hidden" name="action" value="login">
+                    <label for="id">Id Cadastrado:</label>
+                    <input type="text" id="id" name="id" required>
+        
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+        
+                    <input class="button" type="submit" value="Logar">
+                </form>
+               
+                <h2>Cadastro :</h2>
+                <form class="formCadastro" action="/" method="post">  
+                    <input type="hidden" name="action" value="cadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="password2">Confirme a Password:</label>
+                    <input type="password" id="password2" name="password2" required>
+
+                    <input class="button" type="submit" value="Cadastrar">
+                        <p id="mensagem">
+                        {{ resultado.message or "" }}
+                    </p>
+                </form> 
+                 
+            </section>
+
+            <section class="logados">
+                <h2>Funções exclusivas</h2>
+                <h3>Para usuarios logados :</h3>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </footer>
+</body>
+<script>
+    function rolarParaBaixo() {
+        var divMensagens = document.querySelector('.sectionReceberMsg');
+        divMensagens.scrollTop = divMensagens.scrollHeight;
+    }
+
+    window.onload = function() {
+        rolarParaBaixo();
+    }
+</script>
+</html>
